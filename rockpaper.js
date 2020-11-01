@@ -24,59 +24,6 @@ var Player1 = {
      put.innerHTML = nom;
      
  }
- function score2()
- {
-     var min = document.getElementById("Minute").value;
-     var com = document.getElementById("Comment").value;
-     cell1.innerHTML = min;
-     var msg = "<strong>GOOOLLL del "+Team2.name+"!!!</strong> "+com;
-     var msg = "<strong>GOOOLLL del "+Team2.name+"!!!</strong> "+com;
-     addTableRow(min, msg);
-    ++ Team2.score ;
-     document.getElementById("pScore2").innerHTML = Team2.score;
- }
- function addComment()
- {
-     var min = document.getElementById("Minute").value;
-     var com = document.getElementById("Comment").value;
-     addTableRow(min, com);
- }
-
- function matchEnd()
- {
-     var com = document.getElementById("Comment").value;
-     var msg = "<strong>FINAL!</strong> ";
-     if(Team1.score > Team2.score){
-         msg += "Victòria del " + Team1.name;
-     }else if(Team1.score < Team2.score){
-         msg += "Victòria del " + Team2.name;
-     }else{
-         msg += "Empat entre " + Team1.name + " i " + Team2.name;
-     }
-     msg +=" a "+Team1.stadium+". "+com;
-     addTableRow("", msg);
-
-     document.getElementById("Goal1").disabled = true;
-     document.getElementById("AddComment").disabled = true;
-     document.getElementById("Goal2").disabled = true;
-     document.getElementById("End").disabled = true;
- }
- 
- function addTableRow(player1, player2)
- {
-     var table = document.getElementById("scoreresult");
-     var row = table.insertRow(1);
-     var cell1 = row.insertCell(0);
-     cell1.innerHTML = min;
- }
-
-/* When the user clicks on the button, 
-toggle between hiding and shoguanyag the dropdown content */
-function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-  }
-  
-  
 
   function putpedra(){
     var imatge = document.getElementById("imatgejoc");
