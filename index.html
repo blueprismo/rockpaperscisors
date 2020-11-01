@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exercise Javascript</title>
+    <link rel="stylesheet" type="text/css" href="exerciseStyle.css">
+    <script src="rockpaper.js"></script> 
+</head>
+  <body onLoad=load()>
+    <div class="header"><h1></h1></div>
+    <div class="introInfo">
+	   <h2>Player information</h2>
+	   <p><span class="label">Name:</span> <input type="text" id="Name" /></p>
+	   <p><button id="Play" onclick=Play()>Insert Name</button>
+	</div>
+    <div class="matchSummary">
+			<h2>Game</h2>
+		<select id="dropdown">
+			<!--<option selected disabled>tria una jugada</option>-->
+			<optgroup label = "Tria una jugada">
+			<option id="pedra" onclick="putpedra()" value="pedra">Pedra  </option>
+			<option id="paper" onclick="putpaper()" value="paper">Paper</option>
+			<option id="tisores" onclick="puttisores()" value="tisores">Tisores</option>
+		</optgroup>
+		</select>
+		
+		<div class="marker">
+			<div class="teamMarker">
+				
+				<p id="player1">Nom</p> 
+				<img class="imatgeajugar1" id="imatgejoc" alt="imatgejok" src="https://i.pinimg.com/originals/0b/f2/d9/0bf2d933f2f1115e56c55a0b753e3e53.png"/> 
+				<p class="score" id="pScore1">0</p>
+			</div>
+			<div class="teamMarker">
+				<p id="player2">Contrincant</p> 
+				<img class="imatgeajugar1" id="imatgejoc2" alt="imatgejok2" src="https://i.pinimg.com/originals/0b/f2/d9/0bf2d933f2f1115e56c55a0b753e3e53.png"/>
+				<p class="score" id="pScore2">0</p>
+			</div>
+			<div class="filling">
+			    <p> </p>
+			</div>
+		</div>
+		<button onclick=go() id=go class="go"> GO! </button>
+
+		<div class="tableSummary">
+			<h2>Summary</h2>
+		</div>
+	</div>
+  </body>
+</html>
